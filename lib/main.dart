@@ -15,14 +15,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  static final scaffoldMessangerKey = GlobalKey<ScaffoldMessengerState>();
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      // scaffoldMessengerKey: scaffoldMessengerKey,
+    return MaterialApp(
+      scaffoldMessengerKey: scaffoldMessangerKey,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
